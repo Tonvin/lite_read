@@ -10,5 +10,5 @@
 
 (function() {
         'use strict';
-        window.location = 'http://zero.one234.xyz/lite_read/csdn_blog.php?url='+encodeURIComponent(window.location.href);
+        window.location = 'http://zero.one234.com/lite_read/csdn_blog.php?url='+encodeURIComponent(window.location.href);
 })();
