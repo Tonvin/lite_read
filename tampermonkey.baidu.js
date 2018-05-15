@@ -1,13 +1,14 @@
 // ==UserScript==
-// @name         baidu search result no advertisment.
+// @name         New Userscript
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  remove baidu search advertisment.
+// @description  try to take over the world!
 // @author       You
-// @include      /^https://www\.baidu\.com/s\?wd=.*
+// @match        https://www.baidu.com/s*
 // @grant        none
 // ==/UserScript==
 
 (function() {
-	document.getElementsByClassName("result-op")[0].parentNode.removeChild(document.getElementsByClassName("result-op")[1]);
+    'use strict';
+document.getElementById('content_right').style.display = 'none';
 })();
