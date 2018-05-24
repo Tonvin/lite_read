@@ -10,5 +10,6 @@
 
 (function() {
     'use strict';
-document.getElementById('content_right').style.display = 'none';
+    var the_interval = setInterval(function(){ document.getElementById('content_right').style.display = 'none';}, 200);
+    setTimeout(function(){ window.clearInterval(the_interval);}, 5000);
 })();
