@@ -10,6 +10,6 @@
 
 (function() {
     'use strict';
-    var the_interval = setInterval(function(){ document.getElementById('content_right').style.display = 'none';}, 200);
-    setTimeout(function(){ window.clearInterval(the_interval);}, 5000);
+    var the_interval = setInterval(function(){ document.getElementById('content_right').style.display = 'none';}, 500);
+    //setTimeout(function(){ window.clearInterval(the_interval);}, 5000);
 })();
