@@ -16,7 +16,7 @@ if ( $url == '' ) {
 
 $is_url_legal = FALSE;
 if (filter_var($url, FILTER_VALIDATE_URL)) {
-    if ( 1 ==  preg_match ( '/^http:\/\/blog.csdn.net.*/', $url ) ) {
+    if ( 1 ==  preg_match ( '/^http(s):\/\/blog.csdn.net.*/', $url ) ) {
         $is_url_legal = TRUE;
     }
 }
