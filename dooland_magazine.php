@@ -1,7 +1,4 @@
 <?php
-/**
- *@Author Tonvin Tian<itonvin@gmail.com>
-*/
 require_once(dirname(__FILE__).'/vendor/autoload.php');
 $sapi_name = php_sapi_name();
 if ( 'cli' ==  $sapi_name ) {
