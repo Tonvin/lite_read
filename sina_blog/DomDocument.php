@@ -1,15 +1,11 @@
 <?php
-libxml_use_internal_errors(true);
-$dom = new DOMDocument();
-
 $url = urldecode($_REQUEST['url']);
-
 if ( $url == '' ) {
     $url = 'http://blog.sina.com.cn/s/blog_620847f10102y8r0.html?tj=1';
 }
-
 if (filter_var($url, FILTER_VALIDATE_URL)) {
     $html = file_get_contents($url);
+    $dom = new DOMDocument();
     $dom->loadHTML($html);
     $articlebody = $dom->getElementById('articlebody');
     $images = $articlebody->getElementsByTagName('img');
@@ -36,7 +32,6 @@ if (filter_var($url, FILTER_VALIDATE_URL)) {
 .msg{width:80%;margin:auto;text-align:center;}
 .title{width:80%;margin:0.5em auto;text-align:center;font-size:2em;}
 .content{width:80%;margin:auto;font-size:1em;line-height:2em;}
-::-webkit-input-placeholder {color:#ccc;}
 </style>
 </head>
 <body>
@@ -65,11 +60,4 @@ if ( strlen($msg) > 0  ) {
 <?php echo $content;?>
 </div>
 </body>
-<script>
-function leach()
-{
-    var url = document.getElementById('url').value;
-    window.location = 'sina_blog.php?url='+encodeURIComponent(url);
-}
-</script>
 </html>
