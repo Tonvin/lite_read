@@ -6,5 +6,5 @@
 
 * 示例 
 ```
-https://tonvin.net/lite_read/sina_blog/
+http://dev.tonvin.net/lite_read/sina_blog/
 ```
